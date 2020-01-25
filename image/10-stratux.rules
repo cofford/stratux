@@ -23,7 +23,7 @@ ATTRS{idProduct}=="7028", ATTRS{idVendor}=="0403", RUN+="/sbin/modprobe -q ftdi_
 # pl2303 devices are indistinguishable using idVendor and idProduct.
 #  Currently the BU-353-S4 and the TU-S9 (serialout) use the pl2303.
 
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="prolific%n"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="serialout%n"
 
 #SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="bu353s4"
 #SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="tu-s9"
@@ -34,7 +34,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="
 #                 --set-max-power=100 \
 #                 --set-bus-powered=no
 
-SUBSYSTEMS=="usb", ATTRS{interface}=="Stratux Serialout", SYMLINK+="serialout%n"
+#SUBSYSTEMS=="usb", ATTRS{interface}=="Stratux Serialout", SYMLINK+="serialout%n"
 
 
 # SoftRF.
